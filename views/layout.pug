@@ -1,0 +1,81 @@
+doctype html
+html  
+	head
+		// Global site tag (gtag.js) - Google Analytics
+		script(async="" src="https://www.googletagmanager.com/gtag/js?id=UA-135014104-1")
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-135014104-1');
+
+		// ========== Meta Tags ==========
+		meta(charset='UTF-8')
+		meta(name='description', content='IVARNA KLH TECH FEST')
+		meta(name='keywords', content='Ivarna,KLH,TECH FEST,FEB')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		// ========== Title ==========
+		title #{title}
+		// ========== Favicon Ico ==========
+		link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+		// ========== STYLESHEETS ==========
+		// Bootstrap CSS
+		link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+		// Fonts Icon CSS
+		link(href='/css/font-awesome.min.css', rel='stylesheet')
+		link(href='/css/et-line.css', rel='stylesheet')
+		link(href='/css/ionicons.min.css', rel='stylesheet')
+		// Carousel CSS
+		link(href='/css/owl.carousel.min.css', rel='stylesheet')
+		link(href='/css/owl.theme.default.min.css', rel='stylesheet')
+		// Animate CSS
+		link(rel='stylesheet', href='/css/animate.min.css')
+		// Custom styles for this template
+		link(href='/css/main.css', rel='stylesheet')
+
+		
+		// jquery
+		script(src='/js/jquery.min.js')
+		// bootstrap
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", crossorigin="anonymous")
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js", integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o", crossorigin="anonymous")
+		script(src='/js/waypoints.min.js')
+
+		block head-pack
+
+	body
+		.loader
+			.loader-outter
+			.loader-inner
+
+		include ./mods/navbar
+
+		block body-pack
+
+		include ./mods/footer
+
+		script.
+			if(screen.width > 992){
+			function messengerReady() {
+			FxoMessenger.create();
+			FxoMessenger.setConfig({
+			fullscreen: true,
+			headerText: 'Chat to Us'
+			});
+			}
+			}
+		script(src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiMzNTE4NTkiLCJ3ZWIiOnsiYm90SWQiOiI1YzUzZTAzNWVlZTIxYjAwNWMxNDVmOGQiLCJ0aGVtZSI6IiMzNTE4NTkiLCJsYWJlbCI6IkNoYXQgd2l0aCB1cyJ9fQ==" async="" defer="")
+		
+		// slick carousel
+		script(src='/js/owl.carousel.min.js')
+		// parallax
+		script(src='/js/parallax.min.js')
+		// Counter up
+		script(src='/js/jquery.counterup.min.js')
+		// Counter down
+		script(src='/js/jquery.countdown.min.js')
+		// WOW JS
+		script(src='/js/wow.min.js')
+		// Custom js
+		script(src='/js/main.js')
+		block extra-scripts

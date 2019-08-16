@@ -1,0 +1,45 @@
+extends layout
+
+block body-pack
+	// Page Title Section
+	section.inner_cover.parallax-window(data-parallax='scroll', data-image-src='img/bg/Edm.jpg')
+		.overlay_dark
+		.container
+			.row.justify-content-center.align-items-center
+				.col-12
+					.inner_cover_content
+						h3 EDM Night
+	// Page Title Section End
+	
+	// Info Section
+	section.pt100.pb100
+		.container
+			.col-md-8.col-12
+				h5 PRESENTING YOU
+				h3 THE LOST TRIPLETS
+				br
+				img(src='img/bg/lostTriplets.png')
+				.contact_info
+					br
+					p At the evening dawn, the team Ivarna has decided to revive the spirits of participants with an zestful EDM night.
+					| Do pepon with the beat.
+					br
+					ul.social_list
+						li
+							a(href='https://www.facebook.com/ivarna2k19/' target='_')
+								i.ion-social-facebook
+						li
+							a(href='https://twitter.com/IvarnaKlh' target='_')
+								i.ion-social-twitter
+						li
+							a(href='https://www.instagram.com/klhivarna/?hl=en' target='_')
+								i.ion-social-instagram
+			.col-12.mt70
+				#map.map(data-lon='78.3394732', data-lat='17.3486373')
+	// Info Section End
+
+	include ./mods/edm-passes
+
+block extra-scripts
+	// map
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAuahgsm_qfH1F3iywCKzZNMdgsCfnjuUA')

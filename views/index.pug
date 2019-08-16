@@ -1,0 +1,171 @@
+extends layout
+
+block body-pack
+	// Cover Section Slider
+	section#home.home-cover
+		.cover_slider.owl-carousel.owl-theme
+			.cover_item(style="background: url('img/bg/finalbg.jpg');")
+				.slider_content
+					.slider-content-inner
+						.container
+							.slider-content-center
+								h2.cover-title prepare yourself for
+								.container-fluid
+									.row
+										.col-md-4
+										.col-md-4
+											center
+												img.img-fluid(src="img/bg/Logo_Reveal.png" style="height: 75%; width: 75%;" alt="center")
+										.col-md-4
+								br
+								p.cover-date 15 & 16 March 2019 - KL Hyderabad
+								.container-fluid
+									.row
+										.col-md-4
+										.col-md-4
+											center
+												img.img-fluid(src="img/bg/Klh_Logo.png" style="height: 50%; width: 50%;" alt="center")
+										.col-md-4
+	// Cover Section Slider End
+	
+	// Event Info
+	section.pt100.pb100
+		.container
+			.row.justify-content-center
+				.col-6.col-md-3
+					.icon_box_two
+						i.ion-ios-calendar-outline
+						.content
+							h5.box_title Date
+							p.flowShot 15 & 16 March 2019
+				.col-6.col-md-3.flowCap
+					.icon_box_two
+						a(href='https://www.google.com/maps/place/K+L+University+H/@17.3695621,78.3426406,14z/data=!4m8!1m2!2m1!1skluniversity+hyderabad!3m4!1s0x3bcb959fee5b3bad:0x294b001a89bbce8f!8m2!3d17.348484!4d78.339923', target='_blank')
+							i.ion-ios-location-outline
+						.content
+							h5.box_title location
+							a(href='https://www.google.com/maps/place/K+L+University+H/@17.3695621,78.3426406,14z/data=!4m8!1m2!2m1!1skluniversity+hyderabad!3m4!1s0x3bcb959fee5b3bad:0x294b001a89bbce8f!8m2!3d17.348484!4d78.339923', target='_blank') Hyderabad, IN
+				.col-6.col-md-3
+					.icon_box_two
+						i.ion-ios-timer-outline
+						.content
+							h5.box_title 48 hour event
+	// Event Info End
+	
+	include ./mods/countdown
+
+	// Tech Events
+	section.pt100.pb100
+		.container
+			.section_title
+				h3.title Tech Events
+			.row.justify-content-center
+				.col-12.col-md-6
+					p
+				.col-12.col-md-6
+					p
+			// Tech Events Features
+			.row.justify-content-center.mt30
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-laptop
+						.content
+							h4 Hackathon
+							a(href='events#hackathon') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-rocket
+						.content
+							h4 Drone Race
+							a(href='events#drone') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-bullhorn
+						.content
+							h4 Project Expo
+							a(href='events#expo') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-car
+						.content
+							h4 Land Circuit
+							a(href='events#landcircuit') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-code
+						.content
+							h4 Coding
+							a(href='events#coding') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-laptop-phone
+						.content
+							h4 Gaming
+							a(href='events#pubg') read more		
+			// Tech Events Features End
+	// Tech Events End	
+	
+	// MBA Events Start
+	section.pt100.pb100
+		.container
+			.section_title
+				h3.title Management Events
+			.row.justify-content-center
+				.col-12.col-md-6
+					p
+				.col-12.col-md-6
+					p
+			// Management Events Features
+			.row.justify-content-center.mt30
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-chart-bars
+						.content
+							h4 Contrarian
+							a(href='events#contrarian') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-hand
+						.content
+							h4 Corporate Roadies
+							a(href='events#roadies') read more	
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-users
+						.content
+							h4 Esprit de Corps
+							a(href='events#esprit') read more
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-briefcase
+						.content
+							h4 Young Manager
+							a(href='events#manager') read more	
+				.col-12.col-md-6.col-lg-4
+					.icon_box_one
+						i.lnr.lnr-picture
+						.content
+							h4 Ad-Zap
+							a(href='events#adzap') read more	
+
+	// MBA Events End
+
+	// Fest Description
+	section.pt100.pb100
+			.container
+				.section_title
+					h3.title About IVARNA
+				.row.justify-content-center
+					.col-12.col-md-6
+						p
+							| Ivarna provides a platform for one and all to witness one of the most beautiful and groundbreaking
+							| amalgamations of science and technology with pure delight and enthusiasm. With a display of motivating
+							| talks, state of the art tech, cut-throat competitions and breathtaking performances for its audience.
+					.col-12.col-md-6
+						p
+							| Techfests for the past 21 years has served to be the ideal destination for the millennials to learn, create and
+							| experience the beauty of technology.
+
+	include ./mods/sponsors-block
+    
+	include ./mods/edm-passes

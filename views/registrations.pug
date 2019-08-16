@@ -1,0 +1,86 @@
+extends ./layout
+
+block head-pack
+	- if (price == 0)
+		script(src="/js/freeRegistrations.js" type="text/javascript")
+	- else 
+		script(src="/js/registrations.js" type="text/javascript")
+
+block body-pack
+	br
+	br
+	br
+	br
+	br
+
+	.container
+		.row
+			.col-md-1
+			.col-md-10
+				h2.text-uppercase #{title}
+
+				form#fields(action="register" method="post")
+					.row
+						.col-md-4
+							.form-group
+								label(for="name") Team Name
+								input#teamNameInput.form-control(type="text" name="name")
+						.col-md-4
+							.form-group
+								label(for="size") Team Size
+								input.form-control(type="number" name="size" min=requiredSize max=maxSize step=1 value=requiredSize)
+						.col-md-4
+							.form-group
+								label(for="university") University
+								input#university.form-control(type="text" name="university")
+					.row
+						.col-md-4
+							.form-group
+								label(for="contactName") Contact Name
+								input#contactNameInput.form-control(type="text" name="contactName")
+						.col-md-4
+							.form-group
+								label(for="email") Contact Email
+								input#emailInput.form-control(type="email" name="email")
+						.col-md-4
+							.form-group
+								label(for="phone") Phone
+								input#phoneInput.form-control(type="text" name="phone")
+
+					- if (id == 'expo')
+						.form-group
+							label(for='projectTitle') Project Title
+							input#projectTitleInput.form-control(type='text' name='projectTitle')
+					
+					- if (id == 'hackathon' || id == 'expo')
+						h4 Abstract
+						.form-group
+							label(for='abstract') Minimum length is 300 characters
+							textarea#abstractInput.form-control(name='abstract' maxlength=3000 minlength=300 spellcheck)
+					
+					h4 Members
+
+					span#required
+						- for (var i = 1; i <= requiredSize; i++)
+							- var member = "member-" + i;
+							.form-group
+								label(for=member) Member #{i} Full Name (REQUIRED)
+								input.form-control(type="text" name=member)
+					
+					- for (var i = requiredSize + 1; i <= maxSize; i++)
+						- var member = "member-" + i;
+						.form-group
+							label(for=`member-${i}`) Member #{i} Full Name (OPTIONAL)
+							input.form-control(type="text" name=member)
+
+					- if (price != 0)
+						.form-group
+							label(for="amount") Price (You will be redirected to checkout page)
+							input.form-control(type="number" readonly value=price)
+					
+					button.btn-rounded.btn.btn-primary(type="submit") Finish Registration
+					
+			.col-md-1
+
+	br
+	br

@@ -1,0 +1,30 @@
+extends layout
+
+block body-pack
+	
+	// Page Title Section
+	section.inner_cover.parallax-window(data-parallax='scroll', data-image-src='img/bg/sponsors.png')
+		.overlay_dark
+		.container
+			.row.justify-content-center.align-items-center
+				.col-12
+					.inner_cover_content
+						h3 Sponsors
+	// Page Title Section End
+	
+	// About Section
+	section.pt100.pb100
+		.container
+			.section_title
+				h3.title About Our Sponsors
+			.row.justify-content-center
+				.col-12.col-md-6
+					p ...
+				.col-12.col-md-6
+					p ...
+	// About Section End
+
+	include ./mods/sponsors-block
+
+	include ./mods/edm-passes
+

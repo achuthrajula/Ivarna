@@ -1,0 +1,79 @@
+extends layout
+
+block body-pack
+
+	
+	// Page Title Section
+	section.inner_cover.parallax-window(data-parallax='scroll', data-image-src='img/bg/RcAllTerrian.jpg')
+		.overlay_dark
+		.container
+			.row.justify-content-center.align-items-center
+				.col-12
+					.inner_cover_content
+						h3 Events
+	// Page Title Section End
+
+	// Events Section
+	section.pt100.pb100
+		.container
+			for event in events
+				.event_box(id=event.id)
+					-var img = 'img/events/' + event.imgPath;
+					img(src=img, alt='event')
+					.event_info
+						.event_title
+							| #{event.title}
+						.event_subheading
+							strong Prizes #{event.prize} INR
+						.event_subheading
+							if (event.price == 0) 
+								strong Registration is free
+							else
+								strong Registration is #{event.price} INR
+						.event_date
+							strong Date & Time
+							span  #{event.datetime}
+						if (event.rounds != undefined)
+							br
+							.event_subheading
+								h5 Rounds:
+								h6
+									ul
+										for round in event.rounds
+											li #{round}
+					.row.justify-content-center
+						.col-md-6.col-12 
+							if (event.subhead != undefined) 
+								h6 #{event.subhead}
+							| #{event.leftBlock}
+						.col-md-6.col-12 
+							if (event.subhead != undefined)
+								br
+							| #{event.rightBlock}
+					br
+					.row.justify-content-center
+						.col-md-5.col-md-12.col-lg-2
+							a(href='registrations/' + event.id) 
+								button.btn.btn-rounded.btn-block.btn-primary Register
+						.col-md-4
+						.col-md-5.col-md-12.col-lg-2
+							- var modalId = event.id + "Modal";
+							- var dataTarget = '#' + modalId;
+							button.btn.btn-rounded.btn-block.btn-primary(data-toggle="modal" data-target=dataTarget) Rules
+							.modal.fade(role='dialog' id=modalId)
+								.modal-dialog
+									// Modal content
+									.modal-content
+										.modal-header
+											button.close(type='button', data-dismiss='modal') ×
+											h4.modal-title #{event.title}
+										.modal-body
+												ul 
+													h5 RULES
+													for rule in event.rules
+														li #{rule}
+										.modal-footer
+											button.btn.btn-default(type='button', data-dismiss='modal') Close
+	// Events Section End
+	
+	include ./mods/edm-passes

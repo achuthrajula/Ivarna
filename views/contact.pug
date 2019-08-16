@@ -1,0 +1,44 @@
+extends layout
+
+block body-pack
+	
+	// Page Title Section
+	section.inner_cover.parallax-window(data-parallax='scroll', data-image-src='/img/bg/contact.png')
+		.overlay_dark
+		.container
+			.row.justify-content-center.align-items-center
+				.col-12
+					.inner_cover_content
+						h3 Contact Us
+	// Page Title Section End
+
+	// Contact Section
+	section.pt100.pb100
+		.container
+			.col-md-8.col-12
+				.contact_info
+					h5 Reach Out to Us
+					p You can contact us directly for any other queries regarding the fest through any of the following channels.
+					ul.social_list
+						li
+							a(href='https://www.facebook.com/ivarna2k19/' target='_')
+								i.ion-social-facebook
+						li
+							a(href='https://twitter.com/IvarnaKlh' target='_')
+								i.ion-social-twitter
+						li
+							a(href='https://www.instagram.com/klhivarna/?hl=en' target='_')
+								i.ion-social-instagram
+					ul.icon_list.pt50
+						li
+							i.ion-location
+							span KL Hyderabad, Aziz Nagar, Hyderabad, TS 500075
+						li
+							i.ion-ios-telephone
+							span +91 99498 91598
+						li
+							i.ion-email-unread
+							span ivarna@klh.edu.in
+	// Contact Section End
+
+	include ./mods/edm-passes

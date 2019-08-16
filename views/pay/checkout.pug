@@ -1,0 +1,81 @@
+extends ../layout
+
+block head-pack
+	script(src="js/checkValidation.js" type="text/javascript")
+	style(type='text/css').
+		.main {
+		margin-left: 30px;
+		font-family: Verdana, Geneva, sans-serif, serif;
+		}
+		.text {
+		float: left;
+		width: 180px;
+		}
+		.dv {
+		margin-bottom: 5px;
+		}
+
+block body-pack
+
+	br
+	br
+	br
+	br
+
+	.container.bg-light#formContainer
+		.row
+			.col-md-4
+
+				.col-md-12
+					h3 Prices
+					
+					ul 
+						li EDM Pass - 500 INR
+									
+					p *All visitors must carry a valid ID proof
+			
+			.col-md-8
+				h3 Billing
+				form#passesForm.needs-validation
+					span#fields
+						.row
+							.col-md-6
+								.form-group
+									label(for="firstName") Contact First Name
+									input#firstNameInput.form-control(type="text" name="firstName")
+							.col-md-6
+								.form-group
+									label(for="lastName") Contact Last Name
+									input#lastNameInput.form-control(type="text" name="lastName")
+						.row
+							.col-md-8
+								.form-group
+									label(for="email") Email
+									input#emailInput.form-control(type="email" name="email")
+							.col-md-4
+								.form-group
+									label(for="category") Pass Type
+									select#passTypeInput.form-control(type="text" name="passType")
+	
+										option.form-control(value="economy") EDM Pass
+						.row
+							.col-md-8
+								.form-group
+									label(for="phone") Phone
+									input#phoneInput.form-control(type="number" name="phone")
+							.col-md-4
+								.form-group
+									label(for="numPasses") Number of Passes
+									select#numPassesSelect.form-control(name="numPasses") Number of Passes
+										option.form-control(value="1" selected="selected") 1
+										option.form-control(value="2") 2
+										option.form-control(value="3") 3
+										option.form-control(value="4") 4
+										option.form-control(value="5") 5
+										option.form-control(value="6") 6
+					
+					button#checkoutProceed.btn.btn-primary(type="submit") Proceed
+					button#checkout.btn.btn-primary(type="submit") Checkout
+
+	br
+	br
